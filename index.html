@@ -10,6 +10,9 @@
 
     <!--CSS-->
     <link rel="stylesheet" href="sass/style.css">
+
+    <!--JS-->
+    <script src="index.js"></script>
 </head>
 
 
@@ -140,9 +143,9 @@
                 </div>
     
                 <div class="form">
-                    <form action="" id="form1" method="POST">
+                    <form action="https://formspree.io/f/xyybnglp" id="my-form" method="POST">
                         <label for="fname"></label>
-                        <input type="text" id="fname" name="fname" placeholder="Name" required>
+                        <input type="text" id="name" name="name" placeholder="Name" required>
                         
                         <label for="email"></label>
                         <input type="text" id="email" name="email" placeholder="Email" required>
@@ -150,13 +153,13 @@
                         <br><br><textarea name="message" rows="10" cols="56">Type your message here.</textarea>
                         
                         <div class="button">
-                            <input type="submit" name="submit" value="SEND MESSAGE">
+                            <input type="submit" value="SEND MESSAGE">
                         </div>
                         
                     </form>
                 </div>
 
-                <div id="status" class="success">Message Sent. Thank you!</div>
+                <div id="status"></div>
     </div>
 </div>
 

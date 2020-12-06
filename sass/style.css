@@ -7,6 +7,10 @@
           box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   text-align: center;
   font-family: 'Fredericka the Great';
@@ -35,10 +39,34 @@ a:hover {
 }
 
 .name {
-  width: 50%;
+  width: 20%;
   margin-top: 5rem;
   background-color: #4e3230;
   color: white;
+  -webkit-animation-name: example;
+          animation-name: example;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes example {
+  from {
+    width: 20%;
+  }
+  to {
+    width: 50%;
+  }
+}
+
+@keyframes example {
+  from {
+    width: 20%;
+  }
+  to {
+    width: 50%;
+  }
 }
 
 .name h1 {
@@ -168,7 +196,9 @@ a:hover {
   /* IE 9 */
   -webkit-transform: scale(1.5);
   /* Safari 3-8 */
-  transform: scale(1.5);
+  transform: scale(1.2);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 /* Clear floats after the columns */
@@ -274,6 +304,61 @@ a:hover {
   background-color: red;
 }
 
+#status {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 500px;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+#status.success {
+  background-color: #519e04;
+  -webkit-animation: status 4s ease forwards;
+          animation: status 4s ease forwards;
+  color: white;
+  font-weight: 800;
+}
+
+#status.error {
+  background-color: red;
+  -webkit-animation: status 4s ease forwards;
+          animation: status 4s ease forwards;
+  color: white;
+  font-weight: 800;
+}
+
+@-webkit-keyframes status {
+  0% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  90% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  100% {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+@keyframes status {
+  0% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  90% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  100% {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
 @media screen and (min-width: 793px) {
   ul {
     margin-top: 3rem;
@@ -329,6 +414,7 @@ a:hover {
   }
   .skillminor {
     top: 12rem;
+    padding: 3rem 0;
   }
   iframe {
     height: 315px;
