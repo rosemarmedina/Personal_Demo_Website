@@ -203,6 +203,9 @@ a:hover {
             margin: 2rem auto 1rem auto;
         }
     }
+    .column:hover {
+        border-top: 5px solid chartreuse;
+    }
     
 }
 //-----------------------------------------CONTACT PAGE
@@ -229,6 +232,12 @@ a:hover {
             text-align: left;
             border: 1px solid #a0a0a7;
         }
+        textarea, input {
+            width: 98%;
+        }
+        input {
+            margin-top: 1rem;
+        }
         
 }
 
@@ -241,6 +250,9 @@ a:hover {
     color:white;
     font-weight: bold;
     border: none;
+    text-align: center;
+    width: auto;
+    margin-top: 0;
 }
 .button input:hover {
     background-color: red;
@@ -316,6 +328,7 @@ a:hover {
     //CONTACT PAGE
     .form input {
         margin: 0 1rem;
+        width: auto;
     }
     .form textarea {
         width: 31.5rem;
